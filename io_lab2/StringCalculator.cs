@@ -21,11 +21,16 @@ namespace io_lab2
             }
 
             var numsSplitted2 = input.Split("\n");
-            if (numsSplitted2.Count() == 2 && int.TryParse(numsSplitted2[0], out var thirdNum) && int.TryParse(numsSplitted2[1], out var fourthNum))
+            if (numsSplitted2.Count() == 2 && int.TryParse(numsSplitted2[0], out var firstNum2) && int.TryParse(numsSplitted2[1], out var secondNum2))
             {
-                return thirdNum + fourthNum;
+                return firstNum2 + secondNum2;
             }
 
+            var numsSplitted3 = input.Split(',', '\n');
+            if (numsSplitted3.Count() == 3 && int.TryParse(numsSplitted3[0], out var firstNum3) && int.TryParse(numsSplitted3[1], out var secondNum3) && int.TryParse(numsSplitted3[2], out var thirdNum3))
+            {
+                return firstNum3 + secondNum3 + thirdNum3;
+            }
 
             throw new NotImplementedException();
         }

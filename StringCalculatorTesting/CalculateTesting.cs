@@ -65,5 +65,19 @@ namespace StringCalculatorTesting
             //Then
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
+        public void FifthTest()
+        {
+            //Given
+            var expectedResult = 8;
+            var input = "2\n3,3";
+
+            //When
+            var actualResult = sc.Calculate(input);
+
+            //Then
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
