@@ -13,10 +13,15 @@ namespace io_lab2
             {
                 return result;
             }
-            else
+
+            var nums = input.Split(',');
+
+            if (nums.Count() == 2 && int.TryParse(nums[0], out var firstNum) && int.TryParse(nums[1], out var secondNum))
             {
-                throw new NotImplementedException();
+                return firstNum + secondNum;
             }
+
+            throw new NotImplementedException();
         }
     }
 }

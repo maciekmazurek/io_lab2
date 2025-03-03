@@ -1,5 +1,6 @@
 using io_lab2;
 using Microsoft.VisualBasic;
+using System.Security.Cryptography;
 
 namespace StringCalculatorTesting
 {
@@ -36,5 +37,18 @@ namespace StringCalculatorTesting
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [TestMethod]
+        public void ThirdTest()
+        {
+            //Given
+            var expectedResult = 14;
+            var input = "11,3";
+
+            //When
+            var actualResult = sc.Calculate(input);
+
+            //Then
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
