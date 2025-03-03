@@ -21,5 +21,20 @@ namespace StringCalculatorTesting
             //Then
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod] 
+        public void SecondTest()
+        {
+            //Given
+            var expectedResult = 5;
+            var input = "5";
+
+            //When
+            var actualResult = sc.Calculate(input);
+
+            //Then
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }

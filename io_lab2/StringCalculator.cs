@@ -9,6 +9,10 @@ namespace io_lab2
             {
                 return 0;
             }
+            else if (int.TryParse(input, out var result))
+            {
+                return result;
+            }
             else
             {
                 throw new NotImplementedException();
