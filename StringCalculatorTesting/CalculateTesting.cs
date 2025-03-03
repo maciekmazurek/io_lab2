@@ -1,5 +1,6 @@
 using io_lab2;
 using Microsoft.VisualBasic;
+using Newtonsoft.Json.Bson;
 using System.Security.Cryptography;
 
 namespace StringCalculatorTesting
@@ -43,6 +44,20 @@ namespace StringCalculatorTesting
             //Given
             var expectedResult = 14;
             var input = "11,3";
+
+            //When
+            var actualResult = sc.Calculate(input);
+
+            //Then
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void FourthTest()
+        {
+            //Given
+            var expectedResult = 10;
+            var input = "6\n4";
 
             //When
             var actualResult = sc.Calculate(input);
